@@ -1,0 +1,23 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'flights/style2.css' %}">
+
+<h1>Passengers Portal<h1>
+<h2>Flight Details</h2> 
+
+<h2>Location</h2> <p>{{flight.Starting_airport}} To {{flight.Destination_airport}}</p>
+
+<h2>Time</h2> <p>{{flight.Starting_time}}</p>
+
+<h2>Register</h2> 
+<form action="" method="post">
+{% csrf_token %}
+{{ form }}
+<input type="submit" value="Submit">
+</form>
+	<!-- <label for="Name">First Name:</label><br>
+	<input type="text" id="Name" name="Name"><br>
+	<label for="Surname">Last Name:</label><br>
+	<input type="text" id="Surname" name="Surname">
+	<br>
+	<br> -->
+

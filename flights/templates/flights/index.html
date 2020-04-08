@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'flights/style.css' %}">
+
+<h1>Welcome to Flights app</h1>
+{% if latest_flights_list %}
+	<ul>
+	<h3>Dates of available Flights</h3>
+	{% for Flight in latest_flights_list %}
+	
+	<li><a href="/flights/{{Flight.id}}/">{{Flight.Starting_time}}</a></li>
+	{% endfor %}
+	</ul>
+{% else %}
+	<p>No Flights are available.</p>
+{% endif %}
